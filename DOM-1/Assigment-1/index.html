@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-1 Assignment -1</title>
+    <style>
+        #input_1,
+        #input_2 {
+            border: 2px solid gray;
+            color: grey;
+            height: 25px;
+            border-radius: 5px 5px 5px 5px;
+            width: 500px;
+        }
+
+        .container1 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .parent {
+            display: flex;
+            /* border: 1px solid red; */
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 30px;
+        }
+
+        .container2 button {
+            font-size: large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+        <div class="container1">
+            <input id="input_1" type="number" placeholder="enter 1st number" value="" />
+            <input id="input_2" type="number" placeholder="enter 2nd number" value="" />
+        </div>
+
+        <div class="container2">
+            <button id="add_button" onclick="addNumbers()">Add</button>
+            <button id="subtract_button" onclick="subtractNumbers()">Subtract</button>
+            <button id="multiply_button" onclick="multiplyNumbers()">Multiply</button>
+            <button id="divide_button" onclick="divideNumbers()">Divide</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function addNumbers() {
+
+        var num1 = parseFloat(document.getElementById("input_1").value);
+        var num2 = parseFloat(document.getElementById("input_2").value);
+        var num3 = num1+num2
+        alert("The addition is :" + num3);
+    }
+    function subtractNumbers() {
+
+        var num1 = parseFloat(document.getElementById("input_1").value);
+        var num2 = parseFloat(document.getElementById("input_2").value);
+        var num3 = num1-num2
+        alert("The subtraction is :" + num3);
+    }
+    function multiplyNumbers() {
+
+        var num1 = parseFloat(document.getElementById("input_1").value);
+        var num2 = parseFloat(document.getElementById("input_2").value);
+        var num3 = num1*num2
+        alert("The multiplication is :" + num3);
+    }
+    function divideNumbers() {
+
+        var num1 = parseFloat(document.getElementById("input_1").value);
+        var num2 = parseFloat(document.getElementById("input_2").value);
+        if(num1==0){
+            alert("The division is :" + 0);
+            return;
+        }
+        else if(num2==0){
+            alert("Cannot divide by 0 ");
+            return;
+        }
+        else{
+
+        
+        var num3 = num1/num2
+        alert("The division is :" + num3);
+        }
+    }
+    
+
+
+
+</script>
