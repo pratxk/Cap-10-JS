@@ -14,7 +14,7 @@
     <input type="number" name="height" id="height" />
     <br>
     <button onclick="bmiCalculator()"> Calculate BMI</button>
-    <h3 id="output">Output will display here</h3>
+    <!-- <h3 id="output">Output will display here</h3> -->
     <script>
         
         
@@ -25,21 +25,32 @@
             var divisor =  height*height;
             var bmi = weight/divisor;
             // console.log(bmi);
-            var head3 = document.getElementById("output");
+
+            // var head3 = document.getElementById("output");
+            var head3 = document.createElement("h3");
             if(bmi <= 18.4){
                 head3.textContent = "Your BMI is "+ bmi  +" which means you are underweight";
+                document.querySelector("body").append(head3);
             }
             else if(bmi >= 18.5 && bmi <= 24.9){
                 head3.textContent = "Your BMI is "+ bmi  +" which means you are Normal Weight";
+                document.querySelector("body").append(head3);
+
             }
             else if(bmi >= 25 && bmi <= 29.9){
                 head3.textContent = "Your BMI is "+ bmi  +" which means you're Overweight";
+                document.querySelector("body").append(head3);
+
             }
             else if(bmi >= 30){
                 head3.textContent = "Your BMI is "+ bmi  +" which means you're Obese";
+                document.querySelector("body").append(head3);
+
             }
             else{
                 head3.textContent = "Error";
+                document.querySelector("body").append(head3);
+
             }
         }
     </script>
