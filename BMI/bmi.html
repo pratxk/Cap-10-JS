@@ -22,7 +22,8 @@
         function bmiCalculator(){
             var weight = document.getElementById("weight").value;
             var height = document.getElementById("height").value;
-            var divisor =  height*height;
+            var mainHeight = height/100;
+            var divisor =  mainHeight*mainHeight;
             var bmi = weight/divisor;
             // console.log(bmi);
 
